@@ -59,7 +59,6 @@ public class MainActivity extends AppCompatActivity {
                         public void onFailure(Call<Employee> call, Throwable t) {
                             if(employee != null) {
                                 Toast.makeText(MainActivity.this, "Save 2", Toast.LENGTH_SHORT).show();
-
                             }
                             Toast.makeText(MainActivity.this, "Save failed!!!", Toast.LENGTH_SHORT).show();
                             Logger.getLogger(MainActivity.class.getName()).log(Level.SEVERE, "Error occured");
