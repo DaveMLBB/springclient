@@ -18,7 +18,7 @@ import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;
 
-public class MainActivity extends AppCompatActivity {
+public class EmployeeForm extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -51,17 +51,17 @@ public class MainActivity extends AppCompatActivity {
                     .enqueue(new Callback<Employee>() {
                         @Override
                         public void onResponse(Call<Employee> call, Response<Employee> response) {
-                            Toast.makeText(MainActivity.this, "Save Successfull", Toast.LENGTH_SHORT).show();
+                            Toast.makeText(EmployeeForm.this, "Save Successfull", Toast.LENGTH_SHORT).show();
                         }
 
                         @Override
 
                         public void onFailure(Call<Employee> call, Throwable t) {
                             if(employee != null) {
-                                Toast.makeText(MainActivity.this, "Save 2", Toast.LENGTH_SHORT).show();
+                                Toast.makeText(EmployeeForm.this, "Save 2", Toast.LENGTH_SHORT).show();
                             }
-                            Toast.makeText(MainActivity.this, "Save failed!!!", Toast.LENGTH_SHORT).show();
-                            Logger.getLogger(MainActivity.class.getName()).log(Level.SEVERE, "Error occured");
+                            Toast.makeText(EmployeeForm.this, "Save failed!!!", Toast.LENGTH_SHORT).show();
+                            Logger.getLogger(EmployeeForm.class.getName()).log(Level.SEVERE, "Error occured");
                         }
                     });
 
